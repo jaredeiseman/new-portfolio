@@ -1,0 +1,41 @@
+.small-box {
+  position: relative;
+
+  .close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    @include icon(url('../img/close-grey.png'), 32px);
+    @include size(32px);
+    cursor: pointer;
+    z-index: 5;
+    display: none;
+
+    &:hover {
+      background-image: url('../img/close.png');
+    }
+  }
+
+  .content {
+    display: none;
+    @include size(99%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    z-index: 3;
+    background: black;
+
+    .wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    span {
+      font-size: 40px;
+
+    }
+  }
+}

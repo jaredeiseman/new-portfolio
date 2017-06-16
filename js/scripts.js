@@ -34,6 +34,9 @@ $(document).ready(function() {
       height: height + 'px',
       'z-index': 1
     });
+    var target = $elem[0].classList[0];
+    $('.' + target + ' .content').fadeIn('slow');
+    $('.' + target + ' .close').fadeIn('slow');
   }
 
   function contract($elem) {
@@ -44,43 +47,59 @@ $(document).ready(function() {
       height: '100%',
       'z-index': 0
     });
+    var target = $elem[0].classList[0];
+    $('.' + target + ' .content').hide();
+    $('.' + target + ' .close').hide();
   }
 
   $('.one').click(function() {
     if (!oneExp) {
       expand($(this));
       oneExp = true;
-    } else {
-      contract($(this));
-      oneExp = false;
     }
   });
   $('.two').click(function() {
     if (!twoExp) {
       expand($(this));
       twoExp = true;
-    } else {
-      contract($(this));
-      twoExp = false;
     }
   });
   $('.three').click(function() {
     if (!threeExp) {
       expand($(this));
       threeExp = true;
-    } else {
-      contract($(this));
-      threeExp = false;
     }
   });
   $('.four').click(function() {
     if (!fourExp) {
       expand($(this));
       fourExp = true;
-    } else {
-      contract($(this));
-      fourExp = false;
     }
+  });
+
+  $('.one .close').click(function() {
+    contract($(this).parent());
+    setTimeout(function() {
+      oneExp = false;
+    }, 100);
+  });
+  $('.two .close').click(function() {
+    contract($(this).parent());
+    setTimeout(function() {
+      twoExp = false;
+    }, 100);
+  });
+  $('.three .close').click(function() {
+    contract($(this).parent());
+    setTimeout(function() {
+      threeExp = false;
+    }, 100);
+  });
+  $('.four .close').click(function() {
+    contract($(this).parent());
+    setTimeout(function() {
+      fourExp = false;
+    }, 100);
   });
 
   $('.text').html(function(index, text) {

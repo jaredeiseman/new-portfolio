@@ -13,3 +13,6 @@ $black-l-3: lighten($black, 15%);
 //font stacks
 $headings: 'Ubuntu', sans-serif;
 $copy: 'Raleway', sans-serif;
+
+//breakpoints
+$extra-small: 'screen and (max-width: 500px)';
