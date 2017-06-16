@@ -15,6 +15,31 @@ body {
   color: #ccc;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.box {
+  box-shadow: 0 0 45px 5px #1c1c1c;
+}
+.box > * {
+  background: -webkit-radial-gradient(100% 100%, #1c1c1c, #000);
+  border-left: 5px solid #424242;
+  border-top: 5px solid #363636;
+  border-bottom: 5px solid #292929;
+  border-right: 5px solid #1c1c1c;
+}
+.box > *:hover h2 {
+  opacity: 1;
+}
+.box > * h2 {
+  color: #363636;
+  text-shadow: 0 0 5px #000;
+  font-size: 30px;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
 .container {
   height: 100%;
   width: 100%;
@@ -26,23 +51,22 @@ body {
   transform: rotate(90deg);
   margin-left: -20px;
 }
-.container .center {
+.container .box {
   height: 500px;
   width: 500px;
   transform: rotate(45deg);
   display: flex;
   flex-wrap: wrap;
-  box-shadow: 0 0 45px 5px #1c1c1c;
 }
-.container .center > * {
+.container .box > * {
   height: 49%;
   width: 49%;
   margin: .5%;
-  background: radial-gradient(#0f0f0f, black);
-  border-left: 5px solid #4f4f4f;
-  border-top: 5px solid #424242;
-  border-bottom: 5px solid #363636;
-  border-right: 5px solid #292929;
+  display: flex;
+}
+.container .box > * h2 {
+  margin: auto;
+  transform: rotate(-45deg);
 }
 .container .right {
   margin-right: -10px;

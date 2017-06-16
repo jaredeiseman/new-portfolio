@@ -1,2 +1,15 @@
+//primary colors
 $black: #1c1c1c;
 $white: #ccc;
+
+//shades of primaries
+$black-d-1: darken($black, 5%);
+$black-d-2: darken($black, 10%);
+$black-d-3: #000;
+$black-l-1: lighten($black, 5%);
+$black-l-2: lighten($black, 10%);
+$black-l-3: lighten($black, 15%);
+
+//font stacks
+$headings: 'Ubuntu', sans-serif;
+$copy: 'Raleway', sans-serif;
