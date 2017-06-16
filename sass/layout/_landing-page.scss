@@ -1,0 +1,36 @@
+.container {
+  @include size(100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .left {
+    transform: rotate(90deg);
+    margin-left: -20px;
+  }
+
+  .center {
+    @include size(500px);
+    transform: rotate(45deg);
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 0 45px 5px #1c1c1c;
+
+
+    & > * {
+      @include size(49%);
+      margin: .5%;
+      // background: darken($black, 5%);
+      background: radial-gradient(darken($black, 5%), darken($black, 25%));
+      border-left: 5px solid lighten($black, 20%);
+      border-top: 5px solid lighten($black, 15%);
+      border-bottom: 5px solid lighten($black, 10%);
+      border-right: 5px solid lighten($black, 5%);
+    }
+  }
+
+  .right {
+    margin-right: -10px;
+    transform: rotate(270deg);
+  }
+}
