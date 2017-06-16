@@ -1,18 +1,17 @@
 $(document).ready(function() {
 
-  // function rotate(angle, $elem, position) {
-  //   var left = (position.left) / angle;
-  //   var top = (position.top) / angle;
-  //   $({deg: 0}).animate({deg: angle}, {
-  //     duration: 1500,
-  //     step: function(now) {
-  //       $elem.css({
-  //         transform: 'rotate(-' + now + 'deg)',
-  //         // left: '-=' + left + 'px'
-  //       });
-  //     }
-  //   });
-  // }
+  function rotate(angle, $elem) {
+    $elem.css({'animation': 'none'});
+    $({deg: 0}).animate({deg: angle}, {
+      duration: 500,
+      step: function(now) {
+        console.log(typeof now);
+        $elem.css({
+          transform: 'rotate(-' + now + 'deg)'
+        });
+      }
+    });
+  }
 
   var oneExp = false;
   var twoExp = false;
@@ -20,27 +19,30 @@ $(document).ready(function() {
   var fourExp = false;
 
   function expand($elem) {
-    var position = $($elem).offset();
-    var width = $(document).width() * .95;
-    var height = $(document).height() * .95;
-    position.top = position.top - (height * .05 / 2);
-    position.left = position.left - (width * .05 / 2);
+    rotate(360, $('.box'));
+    setTimeout(function() {
+      var position = $($elem).offset();
+      var width = $(document).width() * .95;
+      var height = $(document).height() * .95;
+      position.top = position.top - (height * .05 / 2);
+      position.left = position.left - (width * .05 / 2);
 
-    $($elem).css({'animation': 'none'});
-    $($elem).animate({
-      left: '-' + position.left + 'px',
-      top: '-' + position.top + 'px',
-      width: width + 'px',
-      height: height + 'px',
-      'z-index': 1
-    });
+      $elem.css({'animation': 'none'});
+      $elem.animate({
+        left: '-' + position.left + 'px',
+        top: '-' + position.top + 'px',
+        width: width + 'px',
+        height: height + 'px',
+        'z-index': 1
+      });
+    }, 500);
     var target = $elem[0].classList[0];
     $('.' + target + ' .content').fadeIn('slow');
     $('.' + target + ' .close').fadeIn('slow');
   }
 
   function contract($elem) {
-    $($elem).css({
+    $elem.css({
       left: '0px',
       top: '0px',
       width: '100%',
@@ -50,6 +52,9 @@ $(document).ready(function() {
     var target = $elem[0].classList[0];
     $('.' + target + ' .content').hide();
     $('.' + target + ' .close').hide();
+    setTimeout(function() {
+      rotate(45, $('.box'));
+    }, 500);
   }
 
   $('.one').click(function() {

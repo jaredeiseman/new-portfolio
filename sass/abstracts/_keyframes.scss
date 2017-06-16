@@ -1,9 +1,11 @@
 @keyframes box {
   0% {
     box-shadow: none;
+    transform: rotate(0);
   }
   100% {
     box-shadow: 0 0 45px 5px $black;
+    transform: rotate(-45deg);
   }
 }
 
@@ -66,14 +68,14 @@
 
 @keyframes expand-one {
   0% {
-
+    z-index: 7;
   }
   1% {
-    z-index: 1;
+    z-index: 7;
   }
   20% {
   }
   100% {
-    z-index: 1;
+    z-index: 7;
   }
 }

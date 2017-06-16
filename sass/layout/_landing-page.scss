@@ -10,8 +10,13 @@
   .box {
     @include size(500px);
     // transform: rotate(45deg);
+    animation: box .5s ease forwards 3s;
     display: flex;
     flex-wrap: wrap;
+
+    @include xs-bp {
+      transform: scale(.8);
+    }
 
     .box-container {
       @include size(49.5%);

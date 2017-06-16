@@ -1,9 +1,11 @@
 @keyframes box {
   0% {
     box-shadow: none;
+    transform: rotate(0);
   }
   100% {
     box-shadow: 0 0 45px 5px #1c1c1c;
+    transform: rotate(-45deg);
   }
 }
 @keyframes box-text {
@@ -58,11 +60,14 @@
   }
 }
 @keyframes expand-one {
+  0% {
+    z-index: 7;
+  }
   1% {
-    z-index: 1;
+    z-index: 7;
   }
   100% {
-    z-index: 1;
+    z-index: 7;
   }
 }
 * {
@@ -86,9 +91,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Ubuntu", sans-serif;
 }
 
-.box {
-  animation: box .5s ease forwards 3s;
-}
 .box .box-container > * {
   background: -webkit-radial-gradient(100% 100%, #1c1c1c, #000);
   border-left: 5px solid #424242;
@@ -169,97 +171,97 @@ footer span {
 
 @keyframes animation-station {
   0% {
-    color: #191919;
+    color: #4d4d4d;
   }
   3.33333% {
-    color: #2f2f2f;
-  }
-  6.66667% {
-    color: #111111;
-  }
-  10% {
-    color: #3e3e3e;
-  }
-  13.33333% {
-    color: #383838;
-  }
-  16.66667% {
-    color: #313131;
-  }
-  20% {
-    color: #121212;
-  }
-  23.33333% {
-    color: #303030;
-  }
-  26.66667% {
-    color: #222222;
-  }
-  30% {
-    color: #1f1f1f;
-  }
-  33.33333% {
-    color: #0d0d0d;
-  }
-  36.66667% {
-    color: #2e2e2e;
-  }
-  40% {
-    color: #050505;
-  }
-  43.33333% {
-    color: #212121;
-  }
-  46.66667% {
-    color: #0e0e0e;
-  }
-  50% {
-    color: #202020;
-  }
-  53.33333% {
-    color: #3b3b3b;
-  }
-  56.66667% {
-    color: #484848;
-  }
-  60% {
     color: #262626;
   }
-  63.33333% {
-    color: #0a0a0a;
+  6.66667% {
+    color: #050505;
   }
-  66.66667% {
+  10% {
+    color: #222222;
+  }
+  13.33333% {
+    color: #484848;
+  }
+  16.66667% {
+    color: #303030;
+  }
+  20% {
+    color: #353535;
+  }
+  23.33333% {
+    color: #131313;
+  }
+  26.66667% {
+    color: #232323;
+  }
+  30% {
     color: #3c3c3c;
   }
-  70% {
-    color: #080808;
+  33.33333% {
+    color: #101010;
   }
-  73.33333% {
-    color: #4d4d4d;
+  36.66667% {
+    color: #323232;
   }
-  76.66667% {
-    color: #4d4d4d;
+  40% {
+    color: #383838;
   }
-  80% {
-    color: #393939;
-  }
-  83.33333% {
-    color: #151515;
-  }
-  86.66667% {
-    color: #505050;
-  }
-  90% {
+  43.33333% {
     color: #454545;
   }
-  93.33333% {
-    color: #272727;
+  46.66667% {
+    color: #1e1e1e;
   }
-  96.66667% {
+  50% {
+    color: #1d1d1d;
+  }
+  53.33333% {
+    color: #252525;
+  }
+  56.66667% {
+    color: #212121;
+  }
+  60% {
+    color: #1f1f1f;
+  }
+  63.33333% {
+    color: #4c4c4c;
+  }
+  66.66667% {
     color: #181818;
   }
+  70% {
+    color: #050505;
+  }
+  73.33333% {
+    color: #3a3a3a;
+  }
+  76.66667% {
+    color: #353535;
+  }
+  80% {
+    color: #2d2d2d;
+  }
+  83.33333% {
+    color: #363636;
+  }
+  86.66667% {
+    color: #323232;
+  }
+  90% {
+    color: #393939;
+  }
+  93.33333% {
+    color: #343434;
+  }
+  96.66667% {
+    color: #4e4e4e;
+  }
   100% {
-    color: #303030;
+    color: #1f1f1f;
   }
 }
 .animation-class {
@@ -283,8 +285,14 @@ footer span {
 .container .box {
   height: 500px;
   width: 500px;
+  animation: box .5s ease forwards 3s;
   display: flex;
   flex-wrap: wrap;
+}
+@media screen and (max-width: 500px) {
+  .container .box {
+    transform: scale(0.8);
+  }
 }
 .container .box .box-container {
   height: 49.5%;
