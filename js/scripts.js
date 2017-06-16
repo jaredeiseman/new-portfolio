@@ -82,4 +82,29 @@ $(document).ready(function() {
       fourExp = false;
     }
   });
+
+  $('.text').html(function(index, text) {
+    var split = text.trim().split("");
+    var joined = split.map(function(txt, i) {
+      if (i !== split.length - 1) {
+        return txt + "</span><span class='text'>";
+      } else {
+        return txt + "</span>";
+      }
+    }).join("");
+    return joined;
+  });
+
+  var step = .5;
+  var currentStep = 0;
+
+  $('.text').each(function() {
+    $(this).addClass('animation-class');
+    $(this).css('animation-delay', currentStep + 's');
+    currentStep -= step;
+  });
+
+
+
+
 });

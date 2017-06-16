@@ -1,0 +1,18 @@
+$color-count: 30;
+
+@keyframes animation-station {
+  @for $index from 0 through $color-count {
+    #{percentage($index * (1 / $color-count))} {
+      $rand: random(80);
+      color: rgba($rand, $rand, $rand, 1);
+    }
+  }
+}
+
+.animation-class {
+  animation-name: animation-station;
+  animation-duration: 60s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: forwards;
+}

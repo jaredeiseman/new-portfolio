@@ -96,10 +96,11 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 5px solid #292929;
   border-right: 5px solid #1c1c1c;
 }
-.box .box-container > *:hover h2 {
+
+.small-box:hover h2 {
   opacity: 1 !important;
 }
-.box .box-container > * h2 {
+.small-box h2 {
   color: #363636;
   text-shadow: 0 0 5px #000;
   font-size: 30px;
@@ -107,20 +108,166 @@ h1, h2, h3, h4, h5, h6 {
   transition: opacity .5s;
   animation: box-text 4.5s ease;
 }
-.box .box-container .one {
+
+.one {
   animation: one 3s ease-in-out forwards;
 }
-.box .box-container .two {
+
+.two {
   animation: two 3s ease-in-out forwards;
 }
-.box .box-container .three {
+
+.three {
   animation: three 3s ease-in-out forwards;
 }
-.box .box-container .four {
+
+.four {
   animation: four 3s ease-in-out forwards;
 }
-.box .box-container .expand-one {
-  animation: expand-one 2s linear forwards;
+
+footer .social-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+}
+footer .social-icons .facebook {
+  height: 24px;
+  width: 24px;
+  background-image: url("../img/facebook-grey.png");
+  background-size: 24px 24px;
+  background-position: center;
+  cursor: pointer;
+}
+footer .social-icons .facebook:hover {
+  background-image: url("../img/facebook.png");
+}
+footer .social-icons .twitter {
+  height: 24px;
+  width: 24px;
+  background-image: url("../img/twitter-grey.png");
+  background-size: 24px 24px;
+  background-position: center;
+  cursor: pointer;
+}
+footer .social-icons .twitter:hover {
+  background-image: url("../img/twitter.png");
+}
+footer .social-icons .github {
+  height: 24px;
+  width: 24px;
+  background-image: url("../img/github-grey.png");
+  background-size: 24px 24px;
+  background-position: center;
+  cursor: pointer;
+}
+footer .social-icons .github:hover {
+  background-image: url("../img/github.png");
+}
+footer span {
+  font-size: 40px;
+}
+
+@keyframes animation-station {
+  0% {
+    color: #4c4c4c;
+  }
+  3.33333% {
+    color: #2a2a2a;
+  }
+  6.66667% {
+    color: #111111;
+  }
+  10% {
+    color: #3b3b3b;
+  }
+  13.33333% {
+    color: #484848;
+  }
+  16.66667% {
+    color: #343434;
+  }
+  20% {
+    color: #494949;
+  }
+  23.33333% {
+    color: #141414;
+  }
+  26.66667% {
+    color: #0d0d0d;
+  }
+  30% {
+    color: #353535;
+  }
+  33.33333% {
+    color: #343434;
+  }
+  36.66667% {
+    color: #3e3e3e;
+  }
+  40% {
+    color: #0a0a0a;
+  }
+  43.33333% {
+    color: #2c2c2c;
+  }
+  46.66667% {
+    color: #3e3e3e;
+  }
+  50% {
+    color: #313131;
+  }
+  53.33333% {
+    color: #484848;
+  }
+  56.66667% {
+    color: #191919;
+  }
+  60% {
+    color: #090909;
+  }
+  63.33333% {
+    color: #060606;
+  }
+  66.66667% {
+    color: #131313;
+  }
+  70% {
+    color: #3e3e3e;
+  }
+  73.33333% {
+    color: #4d4d4d;
+  }
+  76.66667% {
+    color: #101010;
+  }
+  80% {
+    color: #0e0e0e;
+  }
+  83.33333% {
+    color: #333333;
+  }
+  86.66667% {
+    color: #4c4c4c;
+  }
+  90% {
+    color: #434343;
+  }
+  93.33333% {
+    color: #4d4d4d;
+  }
+  96.66667% {
+    color: #181818;
+  }
+  100% {
+    color: #4c4c4c;
+  }
+}
+.animation-class {
+  animation-name: animation-station;
+  animation-duration: 60s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: forwards;
 }
 
 .container {
@@ -164,6 +311,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 .container .box .box-container h2 {
   margin: auto;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 body {

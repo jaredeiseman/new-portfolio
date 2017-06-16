@@ -1,0 +1,22 @@
+$box-list: ('one', 'two', 'three', 'four');
+
+.small-box {
+  &:hover h2 {
+    opacity: 1 !important;
+  }
+
+  h2 {
+    color: $black-l-2;
+    text-shadow: 0 0 5px $black-d-3;
+    font-size: 30px;
+    opacity: 0;
+    transition: opacity .5s;
+    animation: box-text 4.5s ease;
+  }
+}
+
+@each $box in $box-list {
+  .#{$box} {
+    animation: #{$box} 3s ease-in-out forwards;
+  }
+}

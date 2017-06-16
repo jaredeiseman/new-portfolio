@@ -1,0 +1,15 @@
+
+
+.box {
+  animation: box .5s ease forwards 3s;
+
+  .box-container {
+    & > * {
+      background: -webkit-radial-gradient(100% 100%, $black, $black-d-3);
+      border-left: 5px solid $black-l-3;
+      border-top: 5px solid $black-l-2;
+      border-bottom: 5px solid $black-l-1;
+      border-right: 5px solid $black;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+footer {
+  .social-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+
+    .facebook {
+      @include size(24px);
+      @include icon(url('../img/facebook-grey.png'), 24px);
+      cursor: pointer;
+
+      &:hover {
+        background-image: url('../img/facebook.png');
+      }
+    }
+    .twitter {
+      @include size(24px);
+      @include icon(url('../img/twitter-grey.png'), 24px);
+      cursor: pointer;
+
+      &:hover {
+        background-image: url('../img/twitter.png');
+      }
+    }
+    .github {
+      @include size(24px);
+      @include icon(url('../img/github-grey.png'), 24px);
+      cursor: pointer;
+      
+      &:hover {
+        background-image: url('../img/github.png');
+      }
+    }
+  }
+
+  span {
+    font-size: 40px;
+  }
+}
