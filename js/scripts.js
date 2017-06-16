@@ -22,10 +22,10 @@ $(document).ready(function() {
     rotate(360, $('.box'));
     setTimeout(function() {
       var position = $($elem).offset();
-      var width = $(document).width() * .95;
-      var height = $(document).height() * .95;
-      position.top = position.top - (height * .05 / 2);
-      position.left = position.left - (width * .05 / 2);
+      var width = $(document).width() * .98;
+      var height = $(document).height() * .98;
+      position.top = position.top - (height * .02 / 2);
+      position.left = position.left - (width * .02 / 2);
 
       $elem.css({'animation': 'none'});
       $elem.animate({

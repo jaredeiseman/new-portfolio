@@ -171,97 +171,97 @@ footer span {
 
 @keyframes animation-station {
   0% {
-    color: #070707;
+    color: #3d3d3d;
   }
   3.33333% {
-    color: #1d1d1d;
+    color: #2d2d2d;
   }
   6.66667% {
-    color: #1e1e1e;
-  }
-  10% {
-    color: #2b2b2b;
-  }
-  13.33333% {
     color: #414141;
   }
+  10% {
+    color: #292929;
+  }
+  13.33333% {
+    color: #131313;
+  }
   16.66667% {
-    color: #101010;
-  }
-  20% {
-    color: #323232;
-  }
-  23.33333% {
-    color: #0b0b0b;
-  }
-  26.66667% {
-    color: #060606;
-  }
-  30% {
-    color: #464646;
-  }
-  33.33333% {
-    color: #0c0c0c;
-  }
-  36.66667% {
-    color: #020202;
-  }
-  40% {
     color: #0a0a0a;
   }
-  43.33333% {
+  20% {
+    color: #202020;
+  }
+  23.33333% {
+    color: #212121;
+  }
+  26.66667% {
+    color: #0e0e0e;
+  }
+  30% {
+    color: #252525;
+  }
+  33.33333% {
+    color: #383838;
+  }
+  36.66667% {
     color: #505050;
   }
+  40% {
+    color: #0f0f0f;
+  }
+  43.33333% {
+    color: #3f3f3f;
+  }
   46.66667% {
-    color: #333333;
+    color: #252525;
   }
   50% {
-    color: #141414;
+    color: #252525;
   }
   53.33333% {
-    color: #343434;
+    color: #3b3b3b;
   }
   56.66667% {
-    color: #444444;
+    color: #3f3f3f;
   }
   60% {
-    color: #404040;
+    color: #242424;
   }
   63.33333% {
-    color: #484848;
+    color: #282828;
   }
   66.66667% {
-    color: #222222;
+    color: #464646;
   }
   70% {
-    color: #4d4d4d;
+    color: #343434;
   }
   73.33333% {
-    color: #3e3e3e;
+    color: #494949;
   }
   76.66667% {
-    color: #181818;
+    color: #282828;
   }
   80% {
-    color: #1e1e1e;
+    color: #070707;
   }
   83.33333% {
-    color: #484848;
+    color: #393939;
   }
   86.66667% {
-    color: #363636;
+    color: #313131;
   }
   90% {
-    color: #080808;
+    color: #2b2b2b;
   }
   93.33333% {
-    color: #2b2b2b;
+    color: #424242;
   }
   96.66667% {
     color: #171717;
   }
   100% {
-    color: #404040;
+    color: #010101;
   }
 }
 .animation-class {
@@ -337,6 +337,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  z-index: -1;
 }
 
 .small-box {
