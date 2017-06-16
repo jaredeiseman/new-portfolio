@@ -14,8 +14,11 @@
     display: flex;
     flex-wrap: wrap;
 
+    @include sm-bp {
+      @include size(425px);
+    }
     @include xs-bp {
-      transform: scale(.8);
+      @include size(250px);
     }
 
     .box-container {
