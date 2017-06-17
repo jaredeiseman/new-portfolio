@@ -5,3 +5,22 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: $headings;
 }
+
+
+.content {
+  h3 {
+    font-size: 34px;
+    border-bottom: 4px solid $white;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  p:last-of-type {
+    padding-bottom: 25px;
+    border-bottom: 4px solid $white;
+  }
+}

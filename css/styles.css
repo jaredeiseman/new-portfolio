@@ -83,12 +83,31 @@ html, body {
   width: 100%;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   color: #ccc;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Ubuntu", sans-serif;
+}
+
+.content h3 {
+  font-size: 34px;
+  border-bottom: 4px solid #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+.content p {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.content p:last-of-type {
+  padding-bottom: 25px;
+  border-bottom: 4px solid #ccc;
 }
 
 .box .box-container > * {
@@ -102,7 +121,7 @@ h1, h2, h3, h4, h5, h6 {
 .small-box:hover h2 {
   opacity: 1 !important;
 }
-.small-box h2 {
+.small-box .label {
   color: #363636;
   text-shadow: 0 0 5px #000;
   font-size: 30px;
@@ -127,141 +146,103 @@ h1, h2, h3, h4, h5, h6 {
   animation: four 3s ease-in-out forwards;
 }
 
-footer .social-icons {
-  display: flex;
-  justify-content: space-between;
-  width: 100px;
-}
-footer .social-icons .facebook {
-  height: 24px;
-  width: 24px;
-  background-image: url("../img/facebook-grey.png");
-  background-size: 24px 24px;
-  background-position: center;
-  cursor: pointer;
-}
-footer .social-icons .facebook:hover {
-  background-image: url("../img/facebook.png");
-}
-footer .social-icons .twitter {
-  height: 24px;
-  width: 24px;
-  background-image: url("../img/twitter-grey.png");
-  background-size: 24px 24px;
-  background-position: center;
-  cursor: pointer;
-}
-footer .social-icons .twitter:hover {
-  background-image: url("../img/twitter.png");
-}
-footer .social-icons .github {
-  height: 24px;
-  width: 24px;
-  background-image: url("../img/github-grey.png");
-  background-size: 24px 24px;
-  background-position: center;
-  cursor: pointer;
-}
-footer .social-icons .github:hover {
-  background-image: url("../img/github.png");
-}
 footer span {
   font-size: 40px;
 }
 
 @keyframes animation-station {
   0% {
-    color: #3d3d3d;
+    color: #3f3f3f;
   }
   3.33333% {
-    color: #2d2d2d;
-  }
-  6.66667% {
-    color: #414141;
-  }
-  10% {
-    color: #292929;
-  }
-  13.33333% {
-    color: #131313;
-  }
-  16.66667% {
-    color: #0a0a0a;
-  }
-  20% {
-    color: #202020;
-  }
-  23.33333% {
-    color: #212121;
-  }
-  26.66667% {
-    color: #0e0e0e;
-  }
-  30% {
-    color: #252525;
-  }
-  33.33333% {
-    color: #383838;
-  }
-  36.66667% {
-    color: #505050;
-  }
-  40% {
-    color: #0f0f0f;
-  }
-  43.33333% {
-    color: #3f3f3f;
-  }
-  46.66667% {
-    color: #252525;
-  }
-  50% {
-    color: #252525;
-  }
-  53.33333% {
-    color: #3b3b3b;
-  }
-  56.66667% {
-    color: #3f3f3f;
-  }
-  60% {
-    color: #242424;
-  }
-  63.33333% {
-    color: #282828;
-  }
-  66.66667% {
-    color: #464646;
-  }
-  70% {
     color: #343434;
   }
-  73.33333% {
-    color: #494949;
+  6.66667% {
+    color: #050505;
   }
-  76.66667% {
+  10% {
+    color: #4d4d4d;
+  }
+  13.33333% {
+    color: #2e2e2e;
+  }
+  16.66667% {
+    color: #373737;
+  }
+  20% {
     color: #282828;
   }
-  80% {
-    color: #070707;
+  23.33333% {
+    color: #3d3d3d;
   }
-  83.33333% {
-    color: #393939;
+  26.66667% {
+    color: #1c1c1c;
   }
-  86.66667% {
-    color: #313131;
+  30% {
+    color: #4f4f4f;
   }
-  90% {
-    color: #2b2b2b;
+  33.33333% {
+    color: #0c0c0c;
   }
-  93.33333% {
-    color: #424242;
+  36.66667% {
+    color: #161616;
   }
-  96.66667% {
+  40% {
+    color: #1d1d1d;
+  }
+  43.33333% {
+    color: #474747;
+  }
+  46.66667% {
+    color: #3d3d3d;
+  }
+  50% {
+    color: #3b3b3b;
+  }
+  53.33333% {
+    color: #0a0a0a;
+  }
+  56.66667% {
     color: #171717;
   }
+  60% {
+    color: #2e2e2e;
+  }
+  63.33333% {
+    color: #4f4f4f;
+  }
+  66.66667% {
+    color: #303030;
+  }
+  70% {
+    color: #141414;
+  }
+  73.33333% {
+    color: #3f3f3f;
+  }
+  76.66667% {
+    color: #373737;
+  }
+  80% {
+    color: #373737;
+  }
+  83.33333% {
+    color: #1b1b1b;
+  }
+  86.66667% {
+    color: #1d1d1d;
+  }
+  90% {
+    color: #101010;
+  }
+  93.33333% {
+    color: #474747;
+  }
+  96.66667% {
+    color: #494949;
+  }
   100% {
-    color: #010101;
+    color: #1c1c1c;
   }
 }
 .animation-class {
@@ -270,6 +251,45 @@ footer span {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: forwards;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+}
+.social-icons .facebook {
+  height: 24px;
+  width: 24px;
+  background-image: url("../img/facebook-grey.png");
+  background-size: 24px 24px;
+  background-position: center;
+  cursor: pointer;
+}
+.social-icons .facebook:hover {
+  background-image: url("../img/facebook.png");
+}
+.social-icons .twitter {
+  height: 24px;
+  width: 24px;
+  background-image: url("../img/twitter-grey.png");
+  background-size: 24px 24px;
+  background-position: center;
+  cursor: pointer;
+}
+.social-icons .twitter:hover {
+  background-image: url("../img/twitter.png");
+}
+.social-icons .github {
+  height: 24px;
+  width: 24px;
+  background-image: url("../img/github-grey.png");
+  background-size: 24px 24px;
+  background-position: center;
+  cursor: pointer;
+}
+.social-icons .github:hover {
+  background-image: url("../img/github.png");
 }
 
 .container {
@@ -379,6 +399,77 @@ footer {
 }
 .small-box .content span {
   font-size: 40px;
+}
+
+.content.contact {
+  height: 100%;
+  width: 100%;
+}
+.content.contact h2 {
+  position: absolute;
+  right: -30px;
+  bottom: 70px;
+  transform: rotate(-90deg);
+}
+.content.contact .social-icons.side {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 100px;
+  right: 20px;
+  bottom: 170px;
+}
+.content.contact .column-container {
+  height: 100%;
+  width: 90%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  overflow: scroll;
+}
+.content.contact .column-container::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.content.contact .column-container .col-1 {
+  width: calc(66.66667% - 33.33333px);
+  float: left;
+  margin-left: 20px;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .content.contact .column-container .col-1 {
+    width: calc(100% - 40px);
+    float: left;
+    margin-left: 20px;
+    height: auto;
+  }
+}
+.content.contact .column-container .col-2 {
+  width: calc(33.33333% - 26.66667px);
+  float: left;
+  margin-left: 20px;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .content.contact .column-container .col-2 {
+    width: calc(100% - 40px);
+    float: left;
+    margin-left: 20px;
+    height: auto;
+  }
+}
+.content.contact .column-container .col-2 img {
+  width: 100%;
 }
 
 body {
