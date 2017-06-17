@@ -8,6 +8,10 @@
       float: left;
       margin-right: 2%;
 
+      @include sm-bp {
+        width: 100%;
+      }
+
       &:last-child {
         margin-right: 0;
       }

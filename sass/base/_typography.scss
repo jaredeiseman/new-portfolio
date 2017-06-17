@@ -27,6 +27,10 @@ h1, h2, h3, h4, h5, h6 {
   ul {
     font-size: 20px;
 
+    @include sm-bp {
+      margin-bottom: 30px;
+    }
+
     .list-heading {
       border-bottom: 2px solid $white;
       padding-bottom: 5px;
