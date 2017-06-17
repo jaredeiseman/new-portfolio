@@ -20,6 +20,7 @@ $(document).ready(function() {
 
   function expand($elem) {
     rotate(360, $('.box'));
+    $elem.css('z-index', 1);
     setTimeout(function() {
       var position = $($elem).offset();
       var width = $(document).width() * .98;
@@ -33,7 +34,6 @@ $(document).ready(function() {
         top: '-' + position.top + 'px',
         width: width + 'px',
         height: height + 'px',
-        'z-index': 1
       });
     }, 500);
     var target = $elem[0].classList[0];
@@ -42,17 +42,18 @@ $(document).ready(function() {
   }
 
   function contract($elem) {
-    $elem.css({
+    $elem.animate({
       left: '0px',
       top: '0px',
       width: '100%',
       height: '100%',
-      'z-index': 0
-    });
+    }, 500);
+
     var target = $elem[0].classList[0];
-    $('.' + target + ' .content').hide();
-    $('.' + target + ' .close').hide();
+    $('.' + target + ' .content').fadeOut('slow');
+    $('.' + target + ' .close').fadeOut('slow');
     setTimeout(function() {
+      $elem.css('z-index', 0);
       rotate(45, $('.box'));
     }, 500);
   }
