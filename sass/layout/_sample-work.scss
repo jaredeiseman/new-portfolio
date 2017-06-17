@@ -1,0 +1,15 @@
+.sample-work {
+  display: flex;
+  align-items: center;
+
+  @include sm-bp {
+    display: block;
+  }
+  .sample-work-container {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+  }
+}

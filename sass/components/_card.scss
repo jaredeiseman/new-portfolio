@@ -1,0 +1,29 @@
+.card {
+  @include grid-column(4);
+  margin-bottom: 30px;
+
+  &:nth-of-type(4), &:nth-of-type(5), &:nth-of-type(6) {
+    margin-bottom: 0;
+  }
+
+  @include sm-bp {
+    @include grid-column(6);
+
+    &:nth-of-type(4) {
+      margin-bottom: 30px;
+    }
+
+  }
+
+  @include xs-bp {
+    @include grid-column(12);
+
+    &:nth-of-type(5), &:nth-of-type(6) {
+      margin-bottom: 30px;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}

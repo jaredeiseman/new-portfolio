@@ -173,97 +173,97 @@ footer span {
 
 @keyframes animation-station {
   0% {
-    color: #050505;
+    color: #313131;
   }
   3.33333% {
-    color: #292929;
-  }
-  6.66667% {
-    color: #151515;
-  }
-  10% {
-    color: #252525;
-  }
-  13.33333% {
-    color: #080808;
-  }
-  16.66667% {
-    color: #141414;
-  }
-  20% {
-    color: #454545;
-  }
-  23.33333% {
-    color: #414141;
-  }
-  26.66667% {
     color: #010101;
   }
-  30% {
+  6.66667% {
     color: #2b2b2b;
   }
+  10% {
+    color: #0f0f0f;
+  }
+  13.33333% {
+    color: #3c3c3c;
+  }
+  16.66667% {
+    color: #4a4a4a;
+  }
+  20% {
+    color: #1d1d1d;
+  }
+  23.33333% {
+    color: #1b1b1b;
+  }
+  26.66667% {
+    color: #3e3e3e;
+  }
+  30% {
+    color: #232323;
+  }
   33.33333% {
-    color: #2c2c2c;
+    color: #1a1a1a;
   }
   36.66667% {
-    color: #4f4f4f;
+    color: #191919;
   }
   40% {
-    color: #353535;
+    color: #2f2f2f;
   }
   43.33333% {
-    color: #0b0b0b;
+    color: #363636;
   }
   46.66667% {
     color: #1b1b1b;
   }
   50% {
-    color: #242424;
+    color: #1c1c1c;
   }
   53.33333% {
-    color: #1e1e1e;
-  }
-  56.66667% {
     color: #383838;
   }
+  56.66667% {
+    color: #1f1f1f;
+  }
   60% {
-    color: #0d0d0d;
+    color: #2e2e2e;
   }
   63.33333% {
-    color: #070707;
-  }
-  66.66667% {
-    color: #1b1b1b;
-  }
-  70% {
-    color: #121212;
-  }
-  73.33333% {
     color: #414141;
   }
+  66.66667% {
+    color: #171717;
+  }
+  70% {
+    color: #2f2f2f;
+  }
+  73.33333% {
+    color: #303030;
+  }
   76.66667% {
-    color: #030303;
+    color: #2c2c2c;
   }
   80% {
-    color: #424242;
+    color: #494949;
   }
   83.33333% {
-    color: #161616;
+    color: #505050;
   }
   86.66667% {
-    color: #191919;
+    color: #0c0c0c;
   }
   90% {
-    color: #1d1d1d;
+    color: #222222;
   }
   93.33333% {
-    color: #121212;
+    color: #3c3c3c;
   }
   96.66667% {
-    color: #2d2d2d;
+    color: #202020;
   }
   100% {
-    color: #303030;
+    color: #333333;
   }
 }
 .animation-class {
@@ -311,6 +311,39 @@ footer span {
 }
 .social-icons .github:hover {
   background-image: url("../img/github.png");
+}
+
+.card {
+  width: calc(33.33333% - 26.66667px);
+  float: left;
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+.card:nth-of-type(4), .card:nth-of-type(5), .card:nth-of-type(6) {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  .card {
+    width: calc(50% - 30px);
+    float: left;
+    margin-left: 20px;
+  }
+  .card:nth-of-type(4) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .card {
+    width: calc(100% - 40px);
+    float: left;
+    margin-left: 20px;
+  }
+  .card:nth-of-type(5), .card:nth-of-type(6) {
+    margin-bottom: 30px;
+  }
+}
+.card img {
+  width: 100%;
 }
 
 .container {
@@ -517,6 +550,23 @@ footer {
 }
 .resume .list-container ul:last-child {
   margin-right: 0;
+}
+
+.sample-work {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .sample-work {
+    display: block;
+  }
+}
+.sample-work .sample-work-container {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
 }
 
 body {
