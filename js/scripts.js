@@ -1,11 +1,13 @@
 $(document).ready(function() {
+  var expanded = 0;
+  var step = .5;
+  var currentStep = 0;
 
   function rotate(angle, $elem) {
     $elem.css({'animation': 'none'});
     $({deg: 0}).animate({deg: angle}, {
       duration: 500,
       step: function(now) {
-        console.log(typeof now);
         $elem.css({
           transform: 'rotate(-' + now + 'deg)'
         });
@@ -13,10 +15,9 @@ $(document).ready(function() {
     });
   }
 
-  var oneExp = false;
-  var twoExp = false;
-  var threeExp = false;
-  var fourExp = false;
+  function determineBoxSelector($elem) {
+    return $elem[0].classList[0];
+  }
 
   function expand($elem) {
     rotate(360, $('.box'));
@@ -36,7 +37,7 @@ $(document).ready(function() {
         height: height + 'px',
       });
     }, 500);
-    var target = $elem[0].classList[0];
+    var target = determineBoxSelector($elem);
     $('.' + target + ' .content').fadeIn('slow');
     $('.' + target + ' .close').fadeIn('slow');
   }
@@ -49,7 +50,7 @@ $(document).ready(function() {
       height: '100%',
     }, 500);
 
-    var target = $elem[0].classList[0];
+    var target = determineBoxSelector($elem);
     $('.' + target + ' .content').fadeOut('slow');
     $('.' + target + ' .close').fadeOut('slow');
     setTimeout(function() {
@@ -58,53 +59,22 @@ $(document).ready(function() {
     }, 500);
   }
 
-  $('.one').click(function() {
-    if (!oneExp) {
+  $('.small-box').click(function() {
+    if (expanded === 0) {
       expand($(this));
-      oneExp = true;
-    }
-  });
-  $('.two').click(function() {
-    if (!twoExp) {
-      expand($(this));
-      twoExp = true;
-    }
-  });
-  $('.three').click(function() {
-    if (!threeExp) {
-      expand($(this));
-      threeExp = true;
-    }
-  });
-  $('.four').click(function() {
-    if (!fourExp) {
-      expand($(this));
-      fourExp = true;
+      switch (determineBoxSelector($(this))) {
+        case 'one': expanded = 1; break;
+        case 'two': expanded = 2; break;
+        case 'three': expanded = 3; break;
+        case 'four': expanded = 4; break;
+      }
     }
   });
 
-  $('.one .close').click(function() {
+  $('.close').click(function() {
     contract($(this).parent());
     setTimeout(function() {
-      oneExp = false;
-    }, 100);
-  });
-  $('.two .close').click(function() {
-    contract($(this).parent());
-    setTimeout(function() {
-      twoExp = false;
-    }, 100);
-  });
-  $('.three .close').click(function() {
-    contract($(this).parent());
-    setTimeout(function() {
-      threeExp = false;
-    }, 100);
-  });
-  $('.four .close').click(function() {
-    contract($(this).parent());
-    setTimeout(function() {
-      fourExp = false;
+      expanded = 0;
     }, 100);
   });
 
@@ -120,16 +90,9 @@ $(document).ready(function() {
     return joined;
   });
 
-  var step = .5;
-  var currentStep = 0;
-
   $('.text').each(function() {
     $(this).addClass('animation-class');
     $(this).css('animation-delay', currentStep + 's');
     currentStep -= step;
   });
-
-
-
-
 });
