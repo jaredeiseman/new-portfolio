@@ -63,9 +63,6 @@
   0% {
     z-index: 7;
   }
-  1% {
-    z-index: 7;
-  }
   100% {
     z-index: 7;
   }
@@ -118,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
   border-right: 5px solid #1c1c1c;
 }
 
-.small-box:hover h2 {
+.small-box:hover .label {
   opacity: 1 !important;
 }
 .small-box .label {
@@ -128,6 +125,13 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0;
   transition: opacity .5s;
   animation: box-text 4.5s ease;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .small-box .label {
+    opacity: 1;
+    font-size: 20px;
+  }
 }
 
 .one {
@@ -152,97 +156,97 @@ footer span {
 
 @keyframes animation-station {
   0% {
-    color: #3f3f3f;
+    color: #1c1c1c;
   }
   3.33333% {
-    color: #343434;
+    color: #373737;
   }
   6.66667% {
-    color: #050505;
+    color: #131313;
   }
   10% {
-    color: #4d4d4d;
+    color: #1f1f1f;
   }
   13.33333% {
-    color: #2e2e2e;
+    color: #2c2c2c;
   }
   16.66667% {
-    color: #373737;
+    color: #090909;
   }
   20% {
-    color: #282828;
+    color: #484848;
   }
   23.33333% {
-    color: #3d3d3d;
-  }
-  26.66667% {
-    color: #1c1c1c;
-  }
-  30% {
-    color: #4f4f4f;
-  }
-  33.33333% {
-    color: #0c0c0c;
-  }
-  36.66667% {
-    color: #161616;
-  }
-  40% {
-    color: #1d1d1d;
-  }
-  43.33333% {
-    color: #474747;
-  }
-  46.66667% {
-    color: #3d3d3d;
-  }
-  50% {
-    color: #3b3b3b;
-  }
-  53.33333% {
     color: #0a0a0a;
   }
-  56.66667% {
+  26.66667% {
+    color: #444444;
+  }
+  30% {
+    color: #2b2b2b;
+  }
+  33.33333% {
+    color: #333333;
+  }
+  36.66667% {
+    color: #242424;
+  }
+  40% {
+    color: #272727;
+  }
+  43.33333% {
+    color: #252525;
+  }
+  46.66667% {
     color: #171717;
   }
-  60% {
-    color: #2e2e2e;
-  }
-  63.33333% {
-    color: #4f4f4f;
-  }
-  66.66667% {
-    color: #303030;
-  }
-  70% {
-    color: #141414;
-  }
-  73.33333% {
-    color: #3f3f3f;
-  }
-  76.66667% {
-    color: #373737;
-  }
-  80% {
-    color: #373737;
-  }
-  83.33333% {
-    color: #1b1b1b;
-  }
-  86.66667% {
-    color: #1d1d1d;
-  }
-  90% {
-    color: #101010;
-  }
-  93.33333% {
+  50% {
     color: #474747;
   }
+  53.33333% {
+    color: #414141;
+  }
+  56.66667% {
+    color: #2a2a2a;
+  }
+  60% {
+    color: #303030;
+  }
+  63.33333% {
+    color: #222222;
+  }
+  66.66667% {
+    color: #010101;
+  }
+  70% {
+    color: #1c1c1c;
+  }
+  73.33333% {
+    color: #070707;
+  }
+  76.66667% {
+    color: #2a2a2a;
+  }
+  80% {
+    color: #121212;
+  }
+  83.33333% {
+    color: #3b3b3b;
+  }
+  86.66667% {
+    color: #212121;
+  }
+  90% {
+    color: #2d2d2d;
+  }
+  93.33333% {
+    color: #3a3a3a;
+  }
   96.66667% {
-    color: #494949;
+    color: #363636;
   }
   100% {
-    color: #1c1c1c;
+    color: #454545;
   }
 }
 .animation-class {

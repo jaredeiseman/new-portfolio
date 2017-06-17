@@ -1,7 +1,7 @@
 $box-list: ('one', 'two', 'three', 'four');
 
 .small-box {
-  &:hover h2 {
+  &:hover .label {
     opacity: 1 !important;
   }
 
@@ -12,6 +12,12 @@ $box-list: ('one', 'two', 'three', 'four');
     opacity: 0;
     transition: opacity .5s;
     animation: box-text 4.5s ease;
+    cursor: pointer;
+
+    @include sm-bp {
+      opacity: 1;
+      font-size: 20px;
+    }
   }
 }
 
