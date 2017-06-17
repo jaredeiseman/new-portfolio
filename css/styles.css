@@ -106,6 +106,17 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 25px;
   border-bottom: 4px solid #ccc;
 }
+.content ul {
+  font-size: 20px;
+}
+.content ul .list-heading {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+.content ul li {
+  margin-bottom: 5px;
+}
 
 .box .box-container > * {
   background: -webkit-radial-gradient(100% 100%, #1c1c1c, #000);
@@ -157,97 +168,97 @@ footer span {
 
 @keyframes animation-station {
   0% {
-    color: #464646;
+    color: #191919;
   }
   3.33333% {
-    color: #272727;
+    color: #3b3b3b;
   }
   6.66667% {
-    color: #333333;
-  }
-  10% {
-    color: #404040;
-  }
-  13.33333% {
-    color: #2a2a2a;
-  }
-  16.66667% {
     color: #121212;
   }
-  20% {
-    color: #181818;
-  }
-  23.33333% {
-    color: #323232;
-  }
-  26.66667% {
-    color: #0f0f0f;
-  }
-  30% {
-    color: #444444;
-  }
-  33.33333% {
-    color: #151515;
-  }
-  36.66667% {
-    color: #090909;
-  }
-  40% {
-    color: #4b4b4b;
-  }
-  43.33333% {
-    color: #1b1b1b;
-  }
-  46.66667% {
-    color: #181818;
-  }
-  50% {
-    color: #030303;
-  }
-  53.33333% {
-    color: #282828;
-  }
-  56.66667% {
-    color: #030303;
-  }
-  60% {
-    color: #333333;
-  }
-  63.33333% {
-    color: #0a0a0a;
-  }
-  66.66667% {
-    color: #030303;
-  }
-  70% {
+  10% {
     color: #141414;
   }
+  13.33333% {
+    color: #181818;
+  }
+  16.66667% {
+    color: #2e2e2e;
+  }
+  20% {
+    color: #3a3a3a;
+  }
+  23.33333% {
+    color: #0d0d0d;
+  }
+  26.66667% {
+    color: #272727;
+  }
+  30% {
+    color: #1d1d1d;
+  }
+  33.33333% {
+    color: #4f4f4f;
+  }
+  36.66667% {
+    color: #050505;
+  }
+  40% {
+    color: #202020;
+  }
+  43.33333% {
+    color: #4b4b4b;
+  }
+  46.66667% {
+    color: #2f2f2f;
+  }
+  50% {
+    color: #121212;
+  }
+  53.33333% {
+    color: #080808;
+  }
+  56.66667% {
+    color: #0a0a0a;
+  }
+  60% {
+    color: #363636;
+  }
+  63.33333% {
+    color: #373737;
+  }
+  66.66667% {
+    color: #2b2b2b;
+  }
+  70% {
+    color: #373737;
+  }
   73.33333% {
-    color: #010101;
+    color: #191919;
   }
   76.66667% {
-    color: #323232;
+    color: #313131;
   }
   80% {
-    color: #353535;
+    color: #363636;
   }
   83.33333% {
-    color: #323232;
+    color: #121212;
   }
   86.66667% {
-    color: #262626;
+    color: #303030;
   }
   90% {
-    color: #010101;
+    color: #232323;
   }
   93.33333% {
-    color: #2d2d2d;
+    color: #262626;
   }
   96.66667% {
-    color: #101010;
+    color: #060606;
   }
   100% {
-    color: #323232;
+    color: #3b3b3b;
   }
 }
 .animation-class {
@@ -483,6 +494,19 @@ footer {
 }
 .content .column-container .col-2 img {
   width: 100%;
+}
+
+.resume .list-container {
+  width: 100%;
+}
+.resume .list-container ul {
+  list-style-type: none;
+  width: 32%;
+  float: left;
+  margin-right: 2%;
+}
+.resume .list-container ul:last-child {
+  margin-right: 0;
 }
 
 body {

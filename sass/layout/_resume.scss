@@ -1,0 +1,16 @@
+.resume {
+  .list-container {
+    width: 100%;
+
+    ul {
+      list-style-type: none;
+      width: 32%;
+      float: left;
+      margin-right: 2%;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
