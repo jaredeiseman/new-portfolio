@@ -9,7 +9,6 @@
 
   .box {
     @include size(500px);
-    // transform: rotate(45deg);
     animation: box .5s ease forwards 3s;
     display: flex;
     flex-wrap: wrap;
@@ -49,7 +48,6 @@
 
       & h2 {
         margin: auto;
-        // transform: rotate(-45deg);
       }
     }
   }
