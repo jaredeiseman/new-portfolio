@@ -13,6 +13,7 @@ $box-list: ('one', 'two', 'three', 'four');
     transition: opacity .5s;
     animation: box-text 4.5s ease;
     cursor: pointer;
+    text-align: center;
 
     @include sm-bp {
       opacity: 1;

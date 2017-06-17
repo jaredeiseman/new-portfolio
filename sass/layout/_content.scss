@@ -1,20 +1,31 @@
-.content.contact {
+.content {
   @include size(100%);
-  h2 {
+
+  .side-label {
     position: absolute;
-    right: -30px;
-    bottom: 70px;
+    bottom: 240px;
+    right: -240px;
+    width: 500px;
+    height: 60px;
     transform: rotate(-90deg);
   }
 
+  h2 {
+    white-space: nowrap;
+    display: inline-block;
+  }
+
   .social-icons.side {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    width: auto;
-    height: 100px;
-    right: 20px;
-    bottom: 170px;
+    margin-left: 20px;
+    display: inline-block;
+    width: 170px;
+    height: 24px;
+
+    & > * {
+      display: inline-block;
+      margin-right: 10px;
+      transform: rotate(90deg);
+    }
   }
 
   .column-container {
@@ -45,7 +56,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      
+
 
       @include sm-bp {
         @include grid-column(12);
