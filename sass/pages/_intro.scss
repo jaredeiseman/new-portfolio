@@ -1,0 +1,59 @@
+#intro-wrapper {
+  background: black;
+  color: lighten(#1c1c1c, 45%);
+  font-family: Ubuntu;
+  font-size: 30px;
+  text-transform: capitalize;
+  @include size(100%);
+
+  a {
+    color: white;
+    h1 {
+      visibility: hidden;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      animation: enter .5s linear forwards 23.5s;
+    }
+
+    &.skip {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 25px;
+      opacity: 0;
+      text-decoration: none;
+      animation: enter .5s linear forwards 2.5s;
+    }
+  }
+
+  h1 {
+    position: absolute;
+    opacity: 0;
+  }
+
+  .welcome {
+    top: 60%;
+    left: 20%;
+    animation: fade-left 4.5s linear 2s;
+  }
+
+  .name {
+    top: 30%;
+    left: 10%;
+    animation: fade-right 4.5s linear 7.5s;
+  }
+
+  .aspiring {
+    left: 20%;
+    top: 15%;
+    animation: fade-left 4.5s linear 13s;
+  }
+
+  .portfolio {
+    bottom: 10%;
+    left: 20%;
+    animation: fade-right 4.5s linear 18.5s;
+  }
+}
